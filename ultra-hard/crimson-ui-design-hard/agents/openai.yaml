@@ -1,4 +1,0 @@
-interface:
-  display_name: "Crimson UI Design HARD"
-  short_description: "Exhaustive frozen UI/UX design, implementation and verification skill"
-  default_prompt: "Use $crimson-ui-design-hard in exhaustive mode: inspect the real product, preserve behavior, load all materially relevant domain/aspect/language/toolkit guidance, choose and implement a product-specific direction, and verify the rendered result with evidence."
