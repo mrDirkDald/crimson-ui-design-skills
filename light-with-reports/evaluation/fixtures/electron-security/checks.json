@@ -1,0 +1,65 @@
+{
+  "id": "electron-security",
+  "checks": [
+    {
+      "id": "iso",
+      "type": "json_equals",
+      "file": "main.json",
+      "description": "contextIsolation enabled",
+      "weight": 12,
+      "path": "contextIsolation",
+      "value": true
+    },
+    {
+      "id": "sand",
+      "type": "json_equals",
+      "file": "main.json",
+      "description": "sandbox enabled",
+      "weight": 12,
+      "path": "sandbox",
+      "value": true
+    },
+    {
+      "id": "websec",
+      "type": "json_equals",
+      "file": "main.json",
+      "description": "webSecurity enabled",
+      "weight": 12,
+      "path": "webSecurity",
+      "value": true
+    },
+    {
+      "id": "perm",
+      "type": "json_equals",
+      "file": "main.json",
+      "description": "Permission handler allowlisted",
+      "weight": 12,
+      "path": "permission_handler",
+      "value": "allowlist"
+    },
+    {
+      "id": "raw",
+      "type": "not_contains",
+      "file": "preload.js",
+      "description": "Whole ipcRenderer not exposed",
+      "weight": 12,
+      "value": "{ ipcRenderer }"
+    },
+    {
+      "id": "main-secure",
+      "type": "contains",
+      "file": "main.js",
+      "description": "BrowserWindow secure webPreferences set",
+      "weight": 10,
+      "value": "contextIsolation:true"
+    },
+    {
+      "id": "window-policy",
+      "type": "contains",
+      "file": "main.js",
+      "description": "Window-open defaults to deny",
+      "weight": 10,
+      "value": "action:\"deny\""
+    }
+  ]
+}

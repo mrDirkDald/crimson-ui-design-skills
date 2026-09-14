@@ -1,0 +1,66 @@
+{
+  "id": "mobile-native",
+  "checks": [
+    {
+      "id": "ime",
+      "type": "json_equals",
+      "file": "mobile.json",
+      "description": "Keyboard does not cover primary action",
+      "weight": 12,
+      "path": "keyboard_covers_action",
+      "value": false
+    },
+    {
+      "id": "perm",
+      "type": "json_equals",
+      "file": "mobile.json",
+      "description": "Permission denial recoverable",
+      "weight": 12,
+      "path": "permission_denial",
+      "value": "recoverable"
+    },
+    {
+      "id": "back",
+      "type": "json_equals",
+      "file": "mobile.json",
+      "description": "System Back predictable",
+      "weight": 12,
+      "path": "back",
+      "value": "platform-predictable"
+    },
+    {
+      "id": "scale",
+      "type": "json_equals",
+      "file": "mobile.json",
+      "description": "Text scaling reflows",
+      "weight": 12,
+      "path": "text_scale",
+      "value": "reflows"
+    },
+    {
+      "id": "restore",
+      "type": "json_equals",
+      "file": "mobile.json",
+      "description": "State restoration present",
+      "weight": 12,
+      "path": "restoration",
+      "value": true
+    },
+    {
+      "id": "ime-src",
+      "type": "contains",
+      "file": "Screen.tsx",
+      "description": "Keyboard-aware layout present",
+      "weight": 10,
+      "value": "KeyboardAvoidingView"
+    },
+    {
+      "id": "perm-src",
+      "type": "contains",
+      "file": "Screen.tsx",
+      "description": "Permission denial recovery encoded",
+      "weight": 10,
+      "value": "open-settings-or-continue-limited"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "id": "expressive-media",
+  "checks": [
+    {
+      "id": "motion",
+      "type": "json_equals",
+      "file": "media.json",
+      "description": "Brand motion preserved",
+      "weight": 12,
+      "path": "brand_motion",
+      "value": "strong"
+    },
+    {
+      "id": "ident",
+      "type": "json_equals",
+      "file": "media.json",
+      "description": "Identity preserved",
+      "weight": 12,
+      "path": "identity",
+      "value": "strong"
+    },
+    {
+      "id": "action",
+      "type": "json_equals",
+      "file": "media.json",
+      "description": "Primary action clarified",
+      "weight": 12,
+      "path": "primary_action",
+      "value": "clear"
+    },
+    {
+      "id": "effects",
+      "type": "json_equals",
+      "file": "media.json",
+      "description": "Competing effects removed",
+      "weight": 12,
+      "path": "effects_compete",
+      "value": false
+    },
+    {
+      "id": "polish",
+      "type": "json_equals",
+      "file": "media.json",
+      "description": "Anti-polish is corrective",
+      "weight": 12,
+      "path": "anti_polish",
+      "value": "corrective"
+    },
+    {
+      "id": "primary-src",
+      "type": "contains",
+      "file": "theme.css",
+      "description": "Primary action remains visually strong",
+      "weight": 10,
+      "value": "opacity:1"
+    },
+    {
+      "id": "motion-src",
+      "type": "contains",
+      "file": "theme.css",
+      "description": "Reduced-motion path exists while brand motion remains",
+      "weight": 10,
+      "value": "prefers-reduced-motion"
+    }
+  ]
+}

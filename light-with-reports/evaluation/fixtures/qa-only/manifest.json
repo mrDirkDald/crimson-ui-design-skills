@@ -1,0 +1,11 @@
+{
+  "id": "qa-only",
+  "baseline": {
+    "report.json": "5e5ee413124bd76f2b6f0388de91a72d2c3a031f96f72fe5f1a2124dec641524",
+    "report.md": "c5f9bde29cebb2b69371b6a8ce88eaabba6bd4c24302f358e54ea511a612b491"
+  },
+  "golden": {
+    "report.json": "c6e7560f89e54417e067df1ae1dbe5d4e9ddb8b3324a23f0b30260ba1cf42f63",
+    "report.md": "c959e31ca559734face7c66651608777908aec4e5c3450d8f7b7509003625be8"
+  }
+}

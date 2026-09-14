@@ -1,0 +1,11 @@
+{
+  "id": "docs-developer",
+  "baseline": {
+    "docs.html": "72feacbac105852afa58159a1139f02d9c9460ffe075448d57d7f068d2236f8c",
+    "docs.json": "8b3e68112a236112da99d6d53f01d5505de2a95cdb3565a33afb369619cff03f"
+  },
+  "golden": {
+    "docs.html": "75d6f5604bb1d6be97e3f893429d6a2ec63297c20bfcf5e1ae87e8b501d65643",
+    "docs.json": "1f5d218cb3b57611307c29214bbbba937b5485f9553db188e371705c388f6ebe"
+  }
+}

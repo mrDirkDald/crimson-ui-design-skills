@@ -1,0 +1,2 @@
+.brand{animation:brand-intro .28s ease-out}.primary{opacity:1;font-weight:700}.surface{box-shadow:none}
+@media(prefers-reduced-motion:reduce){.brand{animation:none}}

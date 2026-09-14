@@ -1,0 +1,11 @@
+{
+  "id": "ecommerce",
+  "baseline": {
+    "checkout.ts": "fc3777c6e49680c695c7720919a3bceeb58018d907dc85dd9ce07ad750b36374",
+    "shop.json": "a36e0a4b828b9350f0a3bd1bf10273c0ba45984f055cde83b99760ec72109da8"
+  },
+  "golden": {
+    "checkout.ts": "02ee6f4fda29a624a767cc4e0eec929e8b3cdfe2e43ae5f3036abaa3982346df",
+    "shop.json": "5dab410b30ce04b530ea742e793697283303125df6193f3d4458a02364294593"
+  }
+}

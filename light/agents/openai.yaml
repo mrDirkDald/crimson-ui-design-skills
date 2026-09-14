@@ -1,0 +1,4 @@
+interface:
+  display_name: "Crimson UI Design"
+  short_description: "Token-efficient UI design with deliberate direction selection"
+  default_prompt: "Check for a verified Light update when allowed, then use $crimson-ui-design with progressive disclosure; load only the smallest relevant subskill, preserve working behavior, implement the requested UI change, use tooling only when it provides concrete evidence, and verify runtime results honestly."

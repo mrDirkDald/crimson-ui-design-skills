@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "name": "crimson-ui-design",
+  "edition": "standard",
+  "repository": "mrDirkDald/crimson-ui-design-skill",
+  "release_tag": "unreleased",
+  "source_commit": "local-unreleased",
+  "asset_name": "CRIMSON-UI-DESIGN-STANDARD-SKILL.zip",
+  "manifest_asset_name": "release-manifest.json",
+  "update_channel": "github-releases"
+}

@@ -1,0 +1,72 @@
+{
+  "id": "tauri-security",
+  "category": "tauri-security",
+  "expected_phase": "IMPLEMENT",
+  "task": "Add scoped folder access and updater behavior to a Tauri app without broad capabilities, traversal/symlink escape or integrity bypass.",
+  "starting_state": "App needs one user-selected output directory and signed updater flow; current capability proposal is broad.",
+  "required_references": [
+    "references/application.md",
+    "references/desktop-app.md",
+    "references/tauri-native-security.md"
+  ],
+  "forbidden_references": [
+    "references/web.md"
+  ],
+  "acceptance": [
+    "Capability scope is least-privilege",
+    "Privileged command input is validated",
+    "Traversal/symlink risk is considered for scoped paths",
+    "Updater integrity mechanism remains enforced"
+  ],
+  "forbidden_outcomes": [
+    "Wildcard permission workaround",
+    "Updater verification bypass"
+  ],
+  "required_evidence": [
+    "capability audit plus negative security tests or BLOCKED reasons"
+  ],
+  "machine_checks": [
+    {
+      "id": "cap",
+      "kind": "fixture_assertion",
+      "description": "Capability scope narrow",
+      "weight": 12
+    },
+    {
+      "id": "input",
+      "kind": "fixture_assertion",
+      "description": "Privileged input validated",
+      "weight": 12
+    },
+    {
+      "id": "sym",
+      "kind": "fixture_assertion",
+      "description": "Symlink policy explicit",
+      "weight": 12
+    },
+    {
+      "id": "upd",
+      "kind": "fixture_assertion",
+      "description": "Updater integrity preserved",
+      "weight": 12
+    },
+    {
+      "id": "tests",
+      "kind": "fixture_assertion",
+      "description": "Security negative tests included",
+      "weight": 12
+    },
+    {
+      "id": "cap-src",
+      "kind": "fixture_assertion",
+      "description": "Capability avoids allow-all wildcard",
+      "weight": 10
+    },
+    {
+      "id": "path-src",
+      "kind": "fixture_assertion",
+      "description": "Native path validation is explicit",
+      "weight": 10
+    }
+  ]
+}

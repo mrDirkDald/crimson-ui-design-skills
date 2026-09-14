@@ -1,0 +1,69 @@
+{
+  "id": "web-auth",
+  "category": "web",
+  "expected_phase": "REFINE",
+  "task": "Improve an authenticated web application session-expiry flow so unsaved work and intended destination survive reauthentication and 403/404/5xx remain distinct.",
+  "starting_state": "Web app has login and protected routes but currently redirects every auth/server problem to one generic error page.",
+  "required_references": [
+    "references/web.md",
+    "references/visual-qa.md"
+  ],
+  "forbidden_references": [
+    "references/application.md"
+  ],
+  "acceptance": [
+    "Session expiry prompts reauth without silent work loss",
+    "Forbidden/not-found/server failures remain distinct",
+    "Intended destination is restored when appropriate"
+  ],
+  "forbidden_outcomes": [
+    "Application reference loaded only to obtain shared form rules"
+  ],
+  "required_evidence": [
+    "route/state evidence for expired and forbidden cases"
+  ],
+  "machine_checks": [
+    {
+      "id": "expired",
+      "kind": "fixture_assertion",
+      "description": "Session expiry uses reauth",
+      "weight": 12
+    },
+    {
+      "id": "403",
+      "kind": "fixture_assertion",
+      "description": "Forbidden distinct",
+      "weight": 12
+    },
+    {
+      "id": "404",
+      "kind": "fixture_assertion",
+      "description": "Not found distinct",
+      "weight": 12
+    },
+    {
+      "id": "unsaved",
+      "kind": "fixture_assertion",
+      "description": "Unsaved work preserved",
+      "weight": 12
+    },
+    {
+      "id": "route",
+      "kind": "fixture_assertion",
+      "description": "Intended route restored",
+      "weight": 12
+    },
+    {
+      "id": "routes-src",
+      "kind": "fixture_assertion",
+      "description": "Auth routing distinguishes forbidden route",
+      "weight": 10
+    },
+    {
+      "id": "intended-src",
+      "kind": "fixture_assertion",
+      "description": "Intended route preservation explicit",
+      "weight": 10
+    }
+  ]
+}

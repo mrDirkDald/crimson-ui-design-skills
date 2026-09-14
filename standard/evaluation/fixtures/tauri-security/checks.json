@@ -1,0 +1,65 @@
+{
+  "id": "tauri-security",
+  "checks": [
+    {
+      "id": "cap",
+      "type": "json_equals",
+      "file": "security.json",
+      "description": "Capability scope narrow",
+      "weight": 12,
+      "path": "capability",
+      "value": "selected-output-only"
+    },
+    {
+      "id": "input",
+      "type": "json_equals",
+      "file": "security.json",
+      "description": "Privileged input validated",
+      "weight": 12,
+      "path": "input_validation",
+      "value": true
+    },
+    {
+      "id": "sym",
+      "type": "json_equals",
+      "file": "security.json",
+      "description": "Symlink policy explicit",
+      "weight": 12,
+      "path": "symlink_policy",
+      "value": "explicit"
+    },
+    {
+      "id": "upd",
+      "type": "json_equals",
+      "file": "security.json",
+      "description": "Updater integrity preserved",
+      "weight": 12,
+      "path": "updater_integrity",
+      "value": true
+    },
+    {
+      "id": "tests",
+      "type": "regex",
+      "file": "security.json",
+      "description": "Security negative tests included",
+      "weight": 12,
+      "pattern": "\"negative_tests\": [1-9]"
+    },
+    {
+      "id": "cap-src",
+      "type": "not_contains",
+      "file": "src-tauri/capabilities/main.json",
+      "description": "Capability avoids allow-all wildcard",
+      "weight": 10,
+      "value": "allow-all"
+    },
+    {
+      "id": "path-src",
+      "type": "contains",
+      "file": "src-tauri/src/security.rs",
+      "description": "Native path validation is explicit",
+      "weight": 10,
+      "value": "canonicalize"
+    }
+  ]
+}

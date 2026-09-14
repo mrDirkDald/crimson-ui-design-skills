@@ -1,0 +1,162 @@
+[
+  {
+    "id": "tiny-refine",
+    "state": "baseline",
+    "ok": true,
+    "bytes": 9169,
+    "renderer": "Pillow deterministic artifact",
+    "note": "Deterministic fixture-state image, not browser/native runtime evidence."
+  },
+  {
+    "id": "tiny-refine",
+    "state": "golden",
+    "ok": true,
+    "bytes": 7792,
+    "renderer": "Pillow deterministic artifact",
+    "note": "Deterministic fixture-state image, not browser/native runtime evidence."
+  },
+  {
+    "id": "desktop-queue",
+    "state": "baseline",
+    "ok": true,
+    "bytes": 13626,
+    "renderer": "Pillow deterministic artifact",
+    "note": "Deterministic fixture-state image, not browser/native runtime evidence."
+  },
+  {
+    "id": "desktop-queue",
+    "state": "golden",
+    "ok": true,
+    "bytes": 14443,
+    "renderer": "Pillow deterministic artifact",
+    "note": "Deterministic fixture-state image, not browser/native runtime evidence."
+  },
+  {
+    "id": "native-editor",
+    "state": "baseline",
+    "ok": true,
+    "bytes": 12000,
+    "renderer": "Pillow deterministic artifact",
+    "note": "Deterministic fixture-state image, not browser/native runtime evidence."
+  },
+  {
+    "id": "native-editor",
+    "state": "golden",
+    "ok": true,
+    "bytes": 12170,
+    "renderer": "Pillow deterministic artifact",
+    "note": "Deterministic fixture-state image, not browser/native runtime evidence."
+  },
+  {
+    "id": "mobile-native",
+    "state": "baseline",
+    "ok": true,
+    "bytes": 12173,
+    "renderer": "Pillow deterministic artifact",
+    "note": "Deterministic fixture-state image, not browser/native runtime evidence."
+  },
+  {
+    "id": "mobile-native",
+    "state": "golden",
+    "ok": true,
+    "bytes": 12838,
+    "renderer": "Pillow deterministic artifact",
+    "note": "Deterministic fixture-state image, not browser/native runtime evidence."
+  },
+  {
+    "id": "web-auth",
+    "state": "baseline",
+    "ok": true,
+    "bytes": 11375,
+    "renderer": "Pillow deterministic artifact",
+    "note": "Deterministic fixture-state image, not browser/native runtime evidence."
+  },
+  {
+    "id": "web-auth",
+    "state": "golden",
+    "ok": true,
+    "bytes": 10907,
+    "renderer": "Pillow deterministic artifact",
+    "note": "Deterministic fixture-state image, not browser/native runtime evidence."
+  },
+  {
+    "id": "dashboard-chart",
+    "state": "baseline",
+    "ok": true,
+    "bytes": 11503,
+    "renderer": "Pillow deterministic artifact",
+    "note": "Deterministic fixture-state image, not browser/native runtime evidence."
+  },
+  {
+    "id": "dashboard-chart",
+    "state": "golden",
+    "ok": true,
+    "bytes": 12655,
+    "renderer": "Pillow deterministic artifact",
+    "note": "Deterministic fixture-state image, not browser/native runtime evidence."
+  },
+  {
+    "id": "ecommerce",
+    "state": "baseline",
+    "ok": true,
+    "bytes": 11506,
+    "renderer": "Pillow deterministic artifact",
+    "note": "Deterministic fixture-state image, not browser/native runtime evidence."
+  },
+  {
+    "id": "ecommerce",
+    "state": "golden",
+    "ok": true,
+    "bytes": 11124,
+    "renderer": "Pillow deterministic artifact",
+    "note": "Deterministic fixture-state image, not browser/native runtime evidence."
+  },
+  {
+    "id": "docs-developer",
+    "state": "baseline",
+    "ok": true,
+    "bytes": 11319,
+    "renderer": "Pillow deterministic artifact",
+    "note": "Deterministic fixture-state image, not browser/native runtime evidence."
+  },
+  {
+    "id": "docs-developer",
+    "state": "golden",
+    "ok": true,
+    "bytes": 11005,
+    "renderer": "Pillow deterministic artifact",
+    "note": "Deterministic fixture-state image, not browser/native runtime evidence."
+  },
+  {
+    "id": "expressive-media",
+    "state": "baseline",
+    "ok": true,
+    "bytes": 12180,
+    "renderer": "Pillow deterministic artifact",
+    "note": "Deterministic fixture-state image, not browser/native runtime evidence."
+  },
+  {
+    "id": "expressive-media",
+    "state": "golden",
+    "ok": true,
+    "bytes": 12401,
+    "renderer": "Pillow deterministic artifact",
+    "note": "Deterministic fixture-state image, not browser/native runtime evidence."
+  },
+  {
+    "id": "qa-only",
+    "state": "baseline",
+    "ok": true,
+    "bytes": 12869,
+    "renderer": "Pillow deterministic artifact",
+    "note": "Deterministic fixture-state image, not browser/native runtime evidence."
+  },
+  {
+    "id": "qa-only",
+    "state": "golden",
+    "ok": true,
+    "bytes": 12372,
+    "renderer": "Pillow deterministic artifact",
+    "note": "Deterministic fixture-state image, not browser/native runtime evidence."
+  }
+]

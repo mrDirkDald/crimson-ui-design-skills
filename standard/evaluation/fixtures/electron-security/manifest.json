@@ -1,0 +1,13 @@
+{
+  "id": "electron-security",
+  "baseline": {
+    "main.js": "f59a1cef0d2bcf84bac824c38fdbad86aad82c4fbccd70256b359a76379f5e05",
+    "main.json": "d837cd13498ca8e101544a161021c57ea8de8dcf95a9b4de6ec82614de6b3209",
+    "preload.js": "a742b13ed3a923e0b39004b3ff30f09ead32299e7557b41773f7c65dac07bd9f"
+  },
+  "golden": {
+    "main.js": "b9f508320534680a4eb60be92b3b933d9ea6d6a7e59b693103929b5e7ccbd404",
+    "main.json": "febc3cd6042f99d4355de19a2a8984ba0a574be6b13bc6bd790035e17565ac12",
+    "preload.js": "7b6a444836d5db6f1e0fe17563b7ed3394136e733f2a48b3310a04ad5f2ba815"
+  }
+}

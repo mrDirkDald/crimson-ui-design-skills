@@ -1,0 +1,60 @@
+{
+  "id": "tiny-refine",
+  "category": "negative-control",
+  "expected_phase": "REFINE",
+  "task": "Remove three redundant decorative labels from an existing downloader screen while preserving the accepted composition and all current behavior.",
+  "starting_state": "Existing desktop downloader UI is structurally accepted; only three named persistent labels are considered noise.",
+  "required_references": [
+    "references/application.md",
+    "references/desktop-app.md",
+    "references/visual-qa.md"
+  ],
+  "forbidden_references": [
+    "references/web.md",
+    "references/evaluation.md"
+  ],
+  "acceptance": [
+    "Only requested noise is removed or relocated",
+    "Primary input, queue and actions remain functionally unchanged",
+    "Rendered result is checked at the original window size when runtime is available"
+  ],
+  "forbidden_outcomes": [
+    "Broad redesign or new navigation structure",
+    "New decorative cards or slogans"
+  ],
+  "required_evidence": [
+    "before/after same-state render or BLOCKED reason"
+  ],
+  "machine_checks": [
+    {
+      "id": "noise1",
+      "kind": "fixture_assertion",
+      "description": "Remove archive eyebrow",
+      "weight": 15
+    },
+    {
+      "id": "noise2",
+      "kind": "fixture_assertion",
+      "description": "Remove media label",
+      "weight": 15
+    },
+    {
+      "id": "noise3",
+      "kind": "fixture_assertion",
+      "description": "Remove decorative tagline",
+      "weight": 10
+    },
+    {
+      "id": "queue",
+      "kind": "fixture_assertion",
+      "description": "Preserve queue surface",
+      "weight": 10
+    },
+    {
+      "id": "download",
+      "kind": "fixture_assertion",
+      "description": "Preserve download action",
+      "weight": 10
+    }
+  ]
+}

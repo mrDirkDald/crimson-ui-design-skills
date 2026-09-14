@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "name": "crimson-ui-design",
+  "edition": "light",
+  "repository": "mrDirkDald/mrDirkDald-crimson-ui-design-light",
+  "version": "2026.09.14.1",
+  "update_channel": "github-main"
+}

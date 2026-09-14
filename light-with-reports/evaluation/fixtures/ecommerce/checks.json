@@ -1,0 +1,66 @@
+{
+  "id": "ecommerce",
+  "checks": [
+    {
+      "id": "variant",
+      "type": "json_equals",
+      "file": "shop.json",
+      "description": "Variant state explicit",
+      "weight": 12,
+      "path": "variant_state",
+      "value": "explicit"
+    },
+    {
+      "id": "stock",
+      "type": "json_equals",
+      "file": "shop.json",
+      "description": "Stock truthful",
+      "weight": 12,
+      "path": "stock",
+      "value": "truthful"
+    },
+    {
+      "id": "total",
+      "type": "json_equals",
+      "file": "shop.json",
+      "description": "Final total visible",
+      "weight": 12,
+      "path": "final_total",
+      "value": true
+    },
+    {
+      "id": "dup",
+      "type": "json_equals",
+      "file": "shop.json",
+      "description": "Duplicate submit prevented",
+      "weight": 12,
+      "path": "duplicate_submit",
+      "value": false
+    },
+    {
+      "id": "recover",
+      "type": "json_equals",
+      "file": "shop.json",
+      "description": "Payment failure recoverable",
+      "weight": 12,
+      "path": "failure_recovery",
+      "value": true
+    },
+    {
+      "id": "dup-src",
+      "type": "contains",
+      "file": "checkout.ts",
+      "description": "Duplicate submission is guarded",
+      "weight": 10,
+      "value": "if(pending) return"
+    },
+    {
+      "id": "recover-src",
+      "type": "contains",
+      "file": "checkout.ts",
+      "description": "Payment failure preserves cart/form",
+      "weight": 10,
+      "value": "preserveCartAndForm"
+    }
+  ]
+}

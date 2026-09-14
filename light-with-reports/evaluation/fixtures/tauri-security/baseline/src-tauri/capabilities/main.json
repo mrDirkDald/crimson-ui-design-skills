@@ -1,0 +1,10 @@
+{
+  "identifier": "main",
+  "windows": [
+    "*"
+  ],
+  "permissions": [
+    "fs:allow-all",
+    "shell:allow-execute"
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "id": "docs-developer",
+  "checks": [
+    {
+      "id": "toc",
+      "type": "json_equals",
+      "file": "docs.json",
+      "description": "TOC available",
+      "weight": 12,
+      "path": "toc",
+      "value": true
+    },
+    {
+      "id": "anchors",
+      "type": "json_equals",
+      "file": "docs.json",
+      "description": "Anchors available",
+      "weight": 12,
+      "path": "anchors",
+      "value": true
+    },
+    {
+      "id": "search",
+      "type": "json_equals",
+      "file": "docs.json",
+      "description": "Search available",
+      "weight": 12,
+      "path": "search",
+      "value": true
+    },
+    {
+      "id": "code",
+      "type": "json_equals",
+      "file": "docs.json",
+      "description": "Code overflow handled",
+      "weight": 12,
+      "path": "code_overflow",
+      "value": "scrolls"
+    },
+    {
+      "id": "ver",
+      "type": "json_equals",
+      "file": "docs.json",
+      "description": "Version context visible",
+      "weight": 12,
+      "path": "version_context",
+      "value": true
+    },
+    {
+      "id": "toc-src",
+      "type": "contains",
+      "file": "docs.html",
+      "description": "On-page navigation present",
+      "weight": 10,
+      "value": "aria-label=\"On this page\""
+    },
+    {
+      "id": "code-src",
+      "type": "contains",
+      "file": "docs.html",
+      "description": "Code overflow is scrollable",
+      "weight": 10,
+      "value": "overflow:auto"
+    }
+  ]
+}

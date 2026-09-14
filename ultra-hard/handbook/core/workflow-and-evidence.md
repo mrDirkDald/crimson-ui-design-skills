@@ -1,0 +1,132 @@
+# Workflow and Evidence
+
+## Why this exists
+
+UI work fails when the agent jumps from a screenshot or a component name directly to styling. The correct process is to identify the real target surface, the real governing code, the user's actual acceptance criteria, and the state transitions that matter before changing appearance.
+
+## Repository reconnaissance
+
+Inspect the project shape before editing. Determine entry points, routes/windows/screens, component hierarchy, styling system, theme/token source, assets, state/store layer, API/data sources, tests, build scripts, and platform shell. Do not read unrelated modules merely because they are nearby.
+
+Create a trace:
+
+```text
+USER SURFACE
+→ route/window/screen
+→ top-level component/view
+→ child components
+→ styling/token sources
+→ state/data sources
+→ platform shell/integration
+```
+
+For a web page, verify which stylesheet or utility classes actually win in the cascade. For WPF/WinUI/Avalonia, trace ResourceDictionary/ThemeResource/Style application. For Qt/QML, trace component imports, properties, palette/theme objects, and style. For SwiftUI/Compose/Flutter, trace environment/theme providers and modifiers. For immediate-mode UI, trace the render function and shared style constants.
+
+## Evidence-backed diagnosis
+
+Separate observation from interpretation.
+
+```text
+OBSERVATION: primary button, copy button and navigation login all use equally saturated accent fills.
+INTERPRETATION: action hierarchy is ambiguous.
+IMPACT: user cannot immediately identify the next action.
+ROOT CAUSE: accent tokens are not semantically separated.
+FIX LEVEL: token/component system, not one local button.
+```
+
+Do not call a design “bad” because it differs from personal taste. Tie criticism to hierarchy, comprehension, task completion, consistency, accessibility, platform fit, or product identity.
+
+## Before/after equivalence
+
+When comparing visual changes, keep state and viewport equivalent where possible. A new screenshot at a different content state cannot reliably prove improvement.
+
+## Runtime limitations
+
+If the app cannot run, mark appearance/interaction conclusions as limited. Static source can establish architecture and likely styling but cannot prove exact rendering, focus order, animation timing, pixel clipping, hover behavior, or OS-specific details.
+
+
+## HARD expansion — evidence and implementation protocol
+
+Before changing this area, record the actual product behavior, governing components/styles, user frequency, platform conventions, and failure/recovery states. Distinguish a visual preference from an observable usability or coherence problem.
+
+### Decision procedure
+
+1. Identify the user job and current state.
+2. Identify what information/action must be recognized first.
+3. Trace the code/style/state owner that actually governs the surface.
+4. Separate structural, visual, interaction, accessibility, and content issues.
+5. Choose the smallest coherent change unless several governing layers are failing together.
+6. Implement with the real toolkit rather than screenshot-specific hacks.
+7. Verify normal, edge, loading, error, disabled, keyboard/focus, scaling/responsive, and recovery states where relevant.
+8. Report observed evidence and remaining unknowns.
+
+### Cross-cutting constraints
+
+- Preserve working behavior and useful platform conventions.
+- Do not hide critical state behind color, hover, animation, or decorative media alone.
+- Do not introduce generic cards/containers unless they represent a real semantic/interaction boundary.
+- Keep product-specific objects and workflow visually stronger than support chrome.
+- Respect localization expansion, high-DPI/text scaling, reduced motion, and assistive technology where applicable.
+- Avoid unrelated refactors and dependency churn.
+- Do not claim PASS for behavior that was not run or observed.
+
+### Runtime checklist
+
+- [ ] Primary job remains discoverable.
+- [ ] Primary and destructive actions are distinguishable.
+- [ ] Empty/loading/error/disabled/recovery behavior is intentional.
+- [ ] Focus/keyboard/input behavior is preserved.
+- [ ] Overflow and scaling are handled.
+- [ ] Theme and semantic color behavior remain coherent.
+- [ ] No fake content, proof, metric, control, or success state was introduced.
+- [ ] The rendered result was inspected when the environment permits it.
+
+
+## ULTRA-HARD deep appendix
+
+When this topic is materially relevant, do not evaluate only the default state. Expand the review across these dimensions:
+
+### State coverage
+
+```text
+default
+hover / pointer-over (if applicable)
+focus-visible
+pressed / active
+selected / current
+disabled / unavailable
+loading / pending
+empty / zero-data
+partial / stale
+success / completion
+warning / risk
+error / failure
+offline / disconnected
+permission denied / limited
+read-only / locked
+long content / localization
+narrow / constrained
+wide / high-density
+reduced motion
+high contrast / forced colors
+```
+
+### Input coverage
+
+Check each relevant input independently: mouse/pointer, keyboard, touch, stylus, controller/remote, assistive technology, and automation/API-driven state. Never assume that a path reachable by hover or precise pointer is reachable by every other input.
+
+### Responsive / adaptive coverage
+
+Record what changes at narrow, standard, wide, ultrawide, high-text-scale, and long-content conditions. Reordering, collapsing, cropping, scroll ownership, navigation model, inspector behavior, command availability, and motion complexity may change independently.
+
+### Evidence standard
+
+Runtime observation outranks inference. A static code path can show intent but not prove visible focus, hit target behavior, animation timing, scroll containment, package/runtime assets, or assistive technology behavior. Report `BLOCKED` when the target environment cannot be exercised.
+
+### Root-cause test
+
+Before adding another local override, ask whether the issue belongs to a governing token, component contract, layout primitive, state model, navigation model, or content structure. Fix the highest stable layer that explains the failure without rewriting unrelated logic.
+
+### Stop condition
+
+Stop when acceptance criteria are met, must-preserve behavior remains correct, high-impact in-scope failures are resolved, and further change would add more churn or decorative novelty than user value.

@@ -1,0 +1,70 @@
+{
+  "id": "native-editor",
+  "category": "application",
+  "expected_phase": "REFINE",
+  "task": "Improve a native multi-document editor with selection-driven inspector, keyboard commands, undo/redo, autosave state and unsaved-close recovery.",
+  "starting_state": "Editor already opens documents and edits content but command hierarchy and save state are inconsistent.",
+  "required_references": [
+    "references/application.md",
+    "references/desktop-app.md",
+    "references/visual-qa.md"
+  ],
+  "forbidden_references": [
+    "references/web.md"
+  ],
+  "acceptance": [
+    "Selection controls inspector context",
+    "Undo/redo and dirty/autosave state remain truthful",
+    "Closing dirty documents has safe recovery"
+  ],
+  "forbidden_outcomes": [
+    "Inspector visually dominates document without workflow reason"
+  ],
+  "required_evidence": [
+    "interaction evidence for selection and dirty-close flow"
+  ],
+  "machine_checks": [
+    {
+      "id": "sel",
+      "kind": "fixture_assertion",
+      "description": "Selection drives inspector",
+      "weight": 12
+    },
+    {
+      "id": "undo",
+      "kind": "fixture_assertion",
+      "description": "Undo model exists",
+      "weight": 12
+    },
+    {
+      "id": "save",
+      "kind": "fixture_assertion",
+      "description": "Autosave state explicit",
+      "weight": 12
+    },
+    {
+      "id": "dirty",
+      "kind": "fixture_assertion",
+      "description": "Dirty close recoverable",
+      "weight": 12
+    },
+    {
+      "id": "cmd",
+      "kind": "fixture_assertion",
+      "description": "Shortcut command model coherent",
+      "weight": 12
+    },
+    {
+      "id": "cmd-src",
+      "kind": "fixture_assertion",
+      "description": "Command surface includes undo/redo",
+      "weight": 10
+    },
+    {
+      "id": "dirty-src",
+      "kind": "fixture_assertion",
+      "description": "Dirty close has explicit recovery path",
+      "weight": 10
+    }
+  ]
+}

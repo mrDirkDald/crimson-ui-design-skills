@@ -1,0 +1,43 @@
+{
+  "fixture": "tiny-refine",
+  "score": 20,
+  "total": 60,
+  "pass": false,
+  "results": [
+    {
+      "id": "noise1",
+      "pass": false,
+      "weight": 15,
+      "observation": "absent=False",
+      "description": "Remove archive eyebrow"
+    },
+    {
+      "id": "noise2",
+      "pass": false,
+      "weight": 15,
+      "observation": "absent=False",
+      "description": "Remove media label"
+    },
+    {
+      "id": "noise3",
+      "pass": false,
+      "weight": 10,
+      "observation": "absent=False",
+      "description": "Remove decorative tagline"
+    },
+    {
+      "id": "queue",
+      "pass": true,
+      "weight": 10,
+      "observation": "contains=True",
+      "description": "Preserve queue surface"
+    },
+    {
+      "id": "download",
+      "pass": true,
+      "weight": 10,
+      "observation": "contains=True",
+      "description": "Preserve download action"
+    }
+  ]
+}

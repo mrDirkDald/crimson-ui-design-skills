@@ -1,0 +1,1 @@
+contextBridge.exposeInMainWorld("files", { pickFolder: () => ipcRenderer.invoke("files:pick-folder") })

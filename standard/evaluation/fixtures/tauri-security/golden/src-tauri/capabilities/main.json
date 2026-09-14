@@ -1,0 +1,10 @@
+{
+  "identifier": "main",
+  "windows": [
+    "main"
+  ],
+  "permissions": [
+    "fs:allow-read-file",
+    "fs:allow-write-file"
+  ]
+}

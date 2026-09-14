@@ -1,0 +1,65 @@
+{
+  "id": "desktop-queue",
+  "checks": [
+    {
+      "id": "many",
+      "type": "json_equals",
+      "file": "state.json",
+      "description": "Supports many-item state",
+      "weight": 15,
+      "path": "supports_many",
+      "value": true
+    },
+    {
+      "id": "cancel",
+      "type": "json_equals",
+      "file": "state.json",
+      "description": "Cancellation is backend-real",
+      "weight": 15,
+      "path": "cancel",
+      "value": "backend-ack"
+    },
+    {
+      "id": "failure",
+      "type": "json_equals",
+      "file": "state.json",
+      "description": "Failure state modeled",
+      "weight": 10,
+      "path": "failure_state",
+      "value": true
+    },
+    {
+      "id": "path",
+      "type": "json_equals",
+      "file": "state.json",
+      "description": "Long path has recovery",
+      "weight": 10,
+      "path": "long_path",
+      "value": "truncate-with-full-access"
+    },
+    {
+      "id": "hero",
+      "type": "not_contains",
+      "file": "ui.html",
+      "description": "No marketing hero in utility",
+      "weight": 10,
+      "value": "class=\"hero\""
+    },
+    {
+      "id": "scroll-src",
+      "type": "contains",
+      "file": "app.html",
+      "description": "Queue owns independent scrolling",
+      "weight": 10,
+      "value": "data-scroll=\"independent\""
+    },
+    {
+      "id": "taskbar-src",
+      "type": "contains",
+      "file": "app.html",
+      "description": "Critical taskbar remains persistent",
+      "weight": 10,
+      "value": "data-persistent=\"true\""
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "version": "10.0.0",
+  "skill_lines": 234,
+  "references": 14,
+  "benchmarks": 13,
+  "executable_fixtures": 13,
+  "executable_fixture_checks": 89,
+  "validators": [
+    "validate_skill.py",
+    "validate_benchmarks.py",
+    "validate_fixture_corpus.py"
+  ],
+  "empirical_agent_runs_included": false,
+  "note": "Fixtures and machine checks are validated. No fabricated baseline-vs-model candidate results are included; empirical promotion still requires real repeated agent runs."
+}

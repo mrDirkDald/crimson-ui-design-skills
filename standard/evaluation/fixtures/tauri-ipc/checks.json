@@ -1,0 +1,65 @@
+{
+  "id": "tauri-ipc",
+  "checks": [
+    {
+      "id": "id",
+      "type": "json_equals",
+      "file": "contract.json",
+      "description": "Stable task IDs",
+      "weight": 12,
+      "path": "stable_id",
+      "value": true
+    },
+    {
+      "id": "cancel",
+      "type": "json_equals",
+      "file": "contract.json",
+      "description": "Backend acknowledges cancel",
+      "weight": 12,
+      "path": "cancel_ack",
+      "value": true
+    },
+    {
+      "id": "reconnect",
+      "type": "json_equals",
+      "file": "contract.json",
+      "description": "Reconnect state query exists",
+      "weight": 12,
+      "path": "reconnect_query",
+      "value": true
+    },
+    {
+      "id": "dto",
+      "type": "json_equals",
+      "file": "contract.json",
+      "description": "DTO evolution explicit",
+      "weight": 12,
+      "path": "dto_versioned",
+      "value": true
+    },
+    {
+      "id": "wrapper",
+      "type": "not_contains",
+      "file": "src.ts",
+      "description": "No scattered raw invoke calls",
+      "weight": 12,
+      "value": "invoke("
+    },
+    {
+      "id": "taskid-rs",
+      "type": "contains",
+      "file": "src-tauri/src/commands.rs",
+      "description": "Rust IPC carries stable task_id",
+      "weight": 10,
+      "value": "task_id:String"
+    },
+    {
+      "id": "query-rs",
+      "type": "contains",
+      "file": "src-tauri/src/commands.rs",
+      "description": "Reconnect can query authoritative tasks",
+      "weight": 10,
+      "value": "query_tasks"
+    }
+  ]
+}

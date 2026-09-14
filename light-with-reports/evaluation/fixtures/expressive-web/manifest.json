@@ -1,0 +1,11 @@
+{
+  "id": "expressive-web",
+  "baseline": {
+    "experience.css": "d514ec97f1edc5550b294235b097f6eed99d2072eacd0610fa0ed73c3e431094",
+    "state.json": "77f8c4c7d40c4c06e6870cc4f9b621cffc6fb5f6ece81defc1887d8f5ceb1a49"
+  },
+  "golden": {
+    "experience.css": "a4857691fa04c82b1c9c2c69e8d4f3f489cc42267969d260973ebb7de5bea8d6",
+    "state.json": "a7bfc80a7dd0be728a9d71e7d1d5cfc883530b7275181653e31cd43bcaffeba4"
+  }
+}

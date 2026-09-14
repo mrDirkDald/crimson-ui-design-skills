@@ -1,0 +1,4 @@
+interface:
+  display_name: "Crimson UI Design"
+  short_description: "Design and verify intentional production UI"
+  default_prompt: "Use $crimson-ui-design to inspect the real target UI, preserve working behavior, diagnose root causes, compare 2–4 genuinely different structural directions when a meaningful redesign has multiple plausible solutions, choose and justify the strongest product-fit direction, use the existing icon system or Lucide/SVG rather than emoji, implement the requested change, and verify the rendered result with evidence."

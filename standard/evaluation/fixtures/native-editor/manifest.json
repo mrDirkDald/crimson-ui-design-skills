@@ -1,0 +1,11 @@
+{
+  "id": "native-editor",
+  "baseline": {
+    "editor.json": "73b8c90bff34aef242122f92c82bd5f06332cd57409147ed3bcf7319aa2c2269",
+    "editor.ts": "90db16a38eae583f810cc2d002d7b171bb6ebce883771986a623928fcf3c9178"
+  },
+  "golden": {
+    "editor.json": "703c2b1d5428d0399aa45700c26d563194079eb95f9ffc78ba4b1fb927ac8db6",
+    "editor.ts": "d6ebb836372d619c6322032b2c0bee486c9be91dd9aeb4270237f54cb41c06e0"
+  }
+}

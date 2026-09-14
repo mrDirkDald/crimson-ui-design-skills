@@ -1,0 +1,1 @@
+contextBridge.exposeInMainWorld("electron", { ipcRenderer })
