@@ -1,4 +1,0 @@
-interface:
-  display_name: "Crimson UI Design MAX"
-  short_description: "Exhaustive UI/UX design with nested deep aspect subskills"
-  default_prompt: "Use $crimson-ui-design-max. Inspect the real product and runtime, load the relevant parent domain skill, then load every deep aspect subskill that materially affects correctness. Do not optimize for token count. Prefer complete evidence-backed design reasoning, language/toolkit-specific implementation guidance, Lucide/SVG icon consistency, accessibility, and runtime verification."
