@@ -1,7 +1,0 @@
-{
-  "missing": "explicit-gap",
-  "scale": "linear-labeled",
-  "baseline": "previous-period",
-  "aggregation": "median-per-day",
-  "accessible_alternative": true
-}

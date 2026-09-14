@@ -1,7 +1,0 @@
-{
-  "contextIsolation": true,
-  "sandbox": true,
-  "webSecurity": true,
-  "permission_handler": "allowlist",
-  "window_open": "deny-default"
-}

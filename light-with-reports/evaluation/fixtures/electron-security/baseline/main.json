@@ -1,7 +1,0 @@
-{
-  "contextIsolation": false,
-  "sandbox": false,
-  "webSecurity": false,
-  "permission_handler": "allow-all",
-  "window_open": "allow-all"
-}

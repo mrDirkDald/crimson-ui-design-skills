@@ -1,7 +1,0 @@
-{
-  "code_changed": true,
-  "pass_without_evidence": 2,
-  "fail_without_severity": 1,
-  "blocked_runtime": "passed",
-  "runtime_packet": false
-}

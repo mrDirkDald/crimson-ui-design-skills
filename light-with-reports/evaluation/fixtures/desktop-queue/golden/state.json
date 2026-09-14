@@ -1,7 +1,0 @@
-{
-  "items": 20,
-  "supports_many": true,
-  "cancel": "backend-ack",
-  "failure_state": true,
-  "long_path": "truncate-with-full-access"
-}

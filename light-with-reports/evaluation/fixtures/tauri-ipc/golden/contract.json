@@ -1,6 +1,0 @@
-{
-  "stable_id": true,
-  "cancel_ack": true,
-  "reconnect_query": true,
-  "dto_versioned": true
-}

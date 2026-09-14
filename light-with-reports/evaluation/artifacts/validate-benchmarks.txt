@@ -1,1 +1,0 @@
-OK: 13 benchmark specs pass JSON Schema and align with 13 executable fixtures.

@@ -1,3 +1,0 @@
-/* progressive-enhancement: core content and navigation render without heavy scene */
-.work-collage{display:grid}
-@media (prefers-reduced-motion: reduce){.work-collage{transform:none;animation:none}}

@@ -1,7 +1,0 @@
-{
-  "items": 2,
-  "supports_many": false,
-  "cancel": "ui-only",
-  "failure_state": false,
-  "long_path": "overflow"
-}

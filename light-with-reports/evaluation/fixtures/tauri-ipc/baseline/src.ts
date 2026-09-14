@@ -1,2 +1,0 @@
-invoke("start")
-invoke("cancel")

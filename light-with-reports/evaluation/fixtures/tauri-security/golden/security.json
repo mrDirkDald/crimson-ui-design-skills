@@ -1,7 +1,0 @@
-{
-  "capability": "selected-output-only",
-  "input_validation": true,
-  "symlink_policy": "explicit",
-  "updater_integrity": true,
-  "negative_tests": 6
-}

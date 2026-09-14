@@ -1,2 +1,0 @@
-Skill: crimson-ui-design
-OK: structural + semantic + fixture checks passed.

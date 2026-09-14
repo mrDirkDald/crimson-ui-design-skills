@@ -1,7 +1,0 @@
-{
-  "capability": "**",
-  "input_validation": false,
-  "symlink_policy": null,
-  "updater_integrity": false,
-  "negative_tests": 0
-}

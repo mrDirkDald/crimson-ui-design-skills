@@ -1,9 +1,0 @@
-{
-  "id": "tiny-refine",
-  "baseline": {
-    "ui.html": "4850af691d3e1f000409b02ab930f4748a9b6f9716179d91fb1dab8d46b37f33"
-  },
-  "golden": {
-    "ui.html": "35a656b68394647ee05500baa679e593fd50a2c2e4d366e08e297ee195be5497"
-  }
-}
